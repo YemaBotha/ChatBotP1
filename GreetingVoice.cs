@@ -7,12 +7,12 @@ namespace POEPar1
 {
     internal class GreetingVoice
     {
-        // This variable stores the full path to the wav file
+        
         private string record;
 
         public GreetingVoice()
         {
-            // Get the folder where the .exe is running from
+           
             string path_directory = AppDomain.CurrentDomain.BaseDirectory;
 
 
@@ -23,7 +23,7 @@ namespace POEPar1
         {
             try
             {
-                // Check the file exists before trying to play it
+                
                 if (!File.Exists(record))
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;
@@ -38,7 +38,7 @@ namespace POEPar1
             }
             catch (Exception ex)
             {
-                // If something goes wrong, show a red error message
+                
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($" error: {ex.Message}");
                 Console.ResetColor();
